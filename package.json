@@ -1,0 +1,24 @@
+{
+  "name": "qrcodegenrator",
+  "version": "1.0.0",
+  "description": "Genrate QR code for any user inputed link",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jill-gosrani/QR_CODE_GENRATOR.git"
+  },
+  "author": "Jill Gosrani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jill-gosrani/QR_CODE_GENRATOR/issues"
+  },
+  "homepage": "https://github.com/jill-gosrani/QR_CODE_GENRATOR#readme",
+  "dependencies": {
+    "inquirer": "^9.2.15",
+    "qr-image": "^3.2.0"
+  }
+}
