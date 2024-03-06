@@ -4,16 +4,23 @@
 3. Create a txt file to save the user input using the native fs node module.
 */
 import inquirer from 'inquirer';
-
+import qr from "qr-Image";
+import fs from 'fs';
 inquirer
   .prompt([
     /* Pass your questions in here */
-    "Type/Paste your link here: "
+    {message:"Type/Paste your link here: ", name:"URL"},
   ])
   .then((answers) => {
-    // Use user feedback for... whatever!!
-    //use that link to genrate QR
+
+    var qr_svg = qr.image(answers.URL);
+    qr_svg.pipe(fs.createWriteStream("qrImg.png"));
+
+    fs.writeFile("QRCode.txt", answers.URL, (err) => {
+      if (err) throw err;
+      console.log("The file has been saved!");
   })
+})
   .catch((error) => {
     if (error.isTtyError) {
       // Prompt couldn't be rendered in the current environment
