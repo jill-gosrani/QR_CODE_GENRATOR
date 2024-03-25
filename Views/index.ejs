@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Genrate</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#myPage">JBG.</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://jill-gosrani.github.io" target="_blank">ABOUT ME</a></li>
+              <li><a href="#payment">Buy me a Coffee 🍵</a></li>            
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!--link text box-->
+      <div class=" jumbotron text-center">
+        <h1>Genrate QR</h1> 
+        <p>Paste your link and download the QR code its that simple!</p> 
+        <form action="/submit" method="post">
+          <div class=" container input-group">
+            <input type="url" id = "link" name="links" class="form-control"  placeholder="Link" required>
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-danger">Genrate</button>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+      <div >
+      <% if (locals.img) { %>
+        <img src="data:image/png;base64,<%= img %>" alt="QR Code">
+      <% } %>
+    </div>
+      <!--Donate-->
+      <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</body>
+</html>

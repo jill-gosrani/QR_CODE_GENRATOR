@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/jill-gosrani/QR_CODE_GENRATOR#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "expess": "^0.0.1-security",
+    "express": "^4.19.1",
     "inquirer": "^9.2.15",
+    "nodemon": "^3.1.0",
     "qr-image": "^3.2.0"
   }
 }
